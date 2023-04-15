@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    aggiungo i vari collegamenti per css js e fonts
+  -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>TODO LIST</title>
+</head>
+<body>
+  
+  <div id="app">
+
+    <div class="container-tasks"> <!--creo container per la todo list-->
+
+      <ul class="todolist d-f">
+        <li
+        v-for="task in tasks" 
+        class="d-f"
+        > <!--creo ciclo for in per ciclare le tasks-->
+
+          <span
+          :class="{'done' : task.status}"
+          @click="task.status = !task.status" 
+          >{{ task.text }}</span> 
+          <!--
+            :class mi permette di associare una classe css al tag html. In questo caso, se la proprietà "status" dell'oggetto "task" è true, la classe "done" sarà associata al tag span
+            @click è un listener per l'evento di click sul tag html. Quando il tag span viene cliccato, esegue una funzione che cambia lo "status" da true a false, o viceversa. Ci ho messo un po a capire come funziona
+          -->
+
+          <i class="fa-solid fa-xmark"></i>
+        </li>
+      </ul>
+    
+    </div>
+
+
+
+
+
+  </div> <!--fine div app-->
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
