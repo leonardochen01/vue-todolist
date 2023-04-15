@@ -43,3 +43,15 @@
 .todolist i:hover{
   filter: invert(1);
 }
+
+.c-input{
+  background-color: burlywood;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.c-input input, button{
+  padding: 10px;
+}

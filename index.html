@@ -16,6 +16,18 @@
   
   <div id="app">
 
+    <div class="c-input d-f"> <!--container per la input testuale-->
+      <input
+      @keyup.enter="addTask"
+      v-model="newTaskString"
+      type="text" placeholder="Nuova TODO"> <!--ho usato @keyup.enter per far si che la funzione venga attivata anche con la pressione del tasto enter.
+      v-model lo uso per associargli la variabile newTaskString
+      -->
+      <button
+      @click="addTask"
+      >Aggiungi</button>
+    </div>
+
     <div class="container-tasks"> <!--creo container per la todo list-->
 
       <ul class="todolist d-f">
@@ -42,11 +54,7 @@
     
     </div>
 
-
-
-
-
-  </div> <!--fine div app-->
+  </div> <!--fine div #app-->
 
   <script src="js/script.js"></script>
 
