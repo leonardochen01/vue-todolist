@@ -22,6 +22,15 @@ createApp({
         }
       ]
     }
+  },
+
+  methods:{
+
+    //scrivo funzione per rimuovere una task. Utilizzo lo splice per rimuovere oggetto dall'array, prendendo indice e numero di elementi da rimuovere.
+    removeTask(index){
+      this.tasks.splice(index,1)
+    } 
+
   }
 }).mount('#app')
 

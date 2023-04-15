@@ -33,7 +33,10 @@
             @click è un listener per l'evento di click sul tag html. Quando il tag span viene cliccato, esegue una funzione che cambia lo "status" da true a false, o viceversa. Ci ho messo un po a capire come funziona
           -->
 
-          <i class="fa-solid fa-xmark"></i>
+          <i
+          class="fa-solid fa-xmark"
+          @click="removeTask(index)"
+          ></i> <!--richiamo funzione removeTask per rimuovere il task corrispondente al click dell'icona X-->
         </li>
       </ul>
     
